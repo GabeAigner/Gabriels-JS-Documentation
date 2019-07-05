@@ -1,8 +1,8 @@
 # `JavaScript Dokumentation by Gabriel Aigner`
 
-## Writing to console
+## Writing to the console
 
-`Console.log();`
+`console.log();`
 
 ## Commenting
 
@@ -46,45 +46,6 @@ A newer feature to the language, symbols are unique identifiers, useful in more 
 
 Collections of related data.
 
-## Arithmetic Operators
-
-1. Add: `+`
-2. Subtract: `-`
-3. Multiply: `*`
-4. Divide: `/`
-5. Remainder: `%`
-
-## String Concatenation
-
-Use `+` to concatenate strings.
-
-`console.log('front ' + 'space'); // Prints 'front space'` \
-`console.log('back' + ' space'); // Prints 'back space'` \
-`console.log('no' + 'space'); // Prints 'nospace'` \
-`console.log('middle' + ' ' + 'space'); // Prints 'middle space'`
-
-## String Concatenation with Variables
-
-`let myPet = 'armadillo';` \
-`console.log('I own a pet ' + myPet + '.');` \
-`// Output: 'I own a pet armadillo.'`
-
-## Properties
-
-`console.log('Hello'.length); // Prints 5`
-
-## Methods
-
-Some string Methods [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype).
-
-## Built-in Objects
-
-- Round: Math.floor()
-- Random: Math.random()
-  \
-  \
-   For more `Math` objects [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
-
 ## Variables
 
 The standard convention in JavaScript is `camel casing`.
@@ -104,6 +65,61 @@ Learn more about `let` [click here (JavaScript Dokumentation)](https://developer
 ### `const`
 
 A `const` variable cannot be reassigned because it is _constant_.
+
+## Arithmetic Operators
+
+1. Add: `+`
+2. Subtract: `-`
+3. Multiply: `*`
+4. Divide: `/`
+5. Remainder: `%`
+
+## String Concatenation
+
+Use `+` to concatenate strings.
+
+`console.log('front ' + 'space'); // Prints 'front space'` \
+`console.log('back' + ' space'); // Prints 'back space'` \
+`console.log('no' + 'space'); // Prints 'nospace'` \
+`console.log('middle' + ' ' + 'space'); // Prints 'middle space'`
+
+## String Templates
+
+String templates are better in my opinion, because you cant fortget the \' \' you need for concatenation.
+
+Use `$` and `{}` to put variables in.
+
+As example:
+
+```
+var myAnimal = 'Dog';
+
+Code:
+
+`This is my ${myAnimal}`
+
+
+Output:
+
+This is my Dog
+
+```
+
+## Properties
+
+`console.log('Hello'.length); // Prints 5`
+
+## Methods
+
+Some string Methods [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype).
+
+## Built-in Objects
+
+- Round: Math.floor()
+- Random: Math.random()
+  \
+  \
+   For more `Math` objects [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
 
 ## Mathematical Assignment Operators
 
