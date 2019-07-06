@@ -1,13 +1,5 @@
 # `JavaScript Dokumentation by Gabriel Aigner`
 
-## Index
-
-#### Data Types
-
-#### [Variables](#variables)
-
-#### Commenting
-
 ## Data Types
 
 ### Number
