@@ -211,3 +211,15 @@ greeting() // Output: Hello, stranger!
 To pass back information from the function call, we use a `return` statement.
 
 As example:
+
+```
+function monitorCount(rows, columns) {
+  return rows * columns;
+}
+
+const numOfMonitors = monitorCount(5, 4);
+
+console.log(numOfMonitors);
+```
+
+Output: `20`
