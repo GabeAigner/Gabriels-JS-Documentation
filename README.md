@@ -1,5 +1,33 @@
 # `JavaScript Dokumentation by Gabriel Aigner`
 
+## Contents
+
+[Data Types](#data-types)
+
+[Variables](#variables)
+
+[Commenting](#commenting)
+
+[Writing to the console](#writing-to-the-console)
+
+[Arithmetic Operators](#arithmetic-operators)
+
+[String Concatenation](#string-oncatenation)
+
+[String Templates](#string-templates)
+
+[Properties](#properties)
+
+[Methods](#methods)
+
+[Built-in Objects](#built-in-objects)
+
+[Mathematical Assignment Operators](#mathematical-assignment-operators)
+
+[The Increment and Decrement Operator](#the-increment-and-decrement-operator)
+
+[Functions](#functions)
+
 ## Data Types
 
 ### Number
