@@ -28,6 +28,8 @@
 
 [Functions](#functions)
 
+[Objects](#objects)
+
 ## Data Types
 
 ### Number
@@ -258,7 +260,7 @@ Output: `20`
 
 A function with no name is `anonymous` \
 
-As Example:
+As example:
 
 ```
 let result = function(numberOne, numberTwo){
@@ -299,4 +301,35 @@ Code: `(after)`
 
 ```
 const squareNum = num => num * num;
+```
+
+## Objects
+
+### Creating Object Literals
+
+As example:
+
+```
+let spaceship = {
+  'Fuel Type': 'gasoline',
+  color: 'silver'
+};
+```
+
+### Accessing Properties
+
+#### Dot Notation
+
+As example:
+
+```
+let spaceship = {
+  homePlanet: 'Earth',
+  color: 'silver',
+  flightPath: ['Venus', 'Mars', 'Saturn']
+};
+spaceship.homePlanet; // Returns 'Earth',
+spaceship.color; // Returns 'silver',
+spaceship.flightPath; // Returns ['Venus', 'Mars', 'Saturn']
+spaceship.flightPath.length; // Returns 3
 ```
