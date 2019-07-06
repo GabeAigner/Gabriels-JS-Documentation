@@ -250,3 +250,25 @@ const plantNeedsWater = (day) => {
   }
 };
 ```
+
+### Concise Body Arrow Functions
+
+The most condensed form of the function is known as concise body.
+
+1. Functions that take only a single parameter don't need that parameter to be enclosed in parentheses. However, at takes zero or multiple parameters, parentheses are required.
+
+2. A single-line block function body does not need `{}`. Without the curly braces, whatever that line evaluates will be automatically returned. The contents should immediately follow the `=>` and the `return` keyword can be removed.
+
+As Example: `(before)`
+
+```
+const squareNum = (num) => {
+  return num * num;
+};
+```
+
+As Example: `(after)`
+
+```
+const squareNum = num => num * num;
+```
