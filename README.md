@@ -1,4 +1,4 @@
-# `JavaScript Documentation by Gabriel Aigner`
+# `JavaScript Dokumentation by Gabriel Aigner`
 
 ## Writing to the console
 
@@ -259,7 +259,7 @@ The most condensed form of the function is known as concise body.
 
 2. A single-line block function body does not need `{}`. Without the curly braces, whatever that line evaluates will be automatically returned. The contents should immediately follow the `=>` and the `return` keyword can be removed.
 
-As Example: `(before)`
+Code: `(before)`
 
 ```
 const squareNum = (num) => {
@@ -267,7 +267,7 @@ const squareNum = (num) => {
 };
 ```
 
-As Example: `(after)`
+Code: `(after)`
 
 ```
 const squareNum = num => num * num;
