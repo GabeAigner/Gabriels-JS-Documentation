@@ -143,3 +143,71 @@ for our example it's `3`;
 
 `x--;` is like `x = x - 1` \
 for our example it's `1`;
+
+## Functions
+
+### Declare a funkction
+
+Write `function` infront of your function name.
+
+Add `()` to oyur function name.
+
+Write `{}` after your name and write code into it. Don't forget the closing Brackez `}`
+
+Example:
+
+```
+function writeMyName() {
+   console.log('Gabriel');
+}
+```
+
+### Call a function
+
+To call a function just write its name in the code.
+
+```
+writeMyName();
+```
+
+For this example it will output my name Gabriel.
+
+### Function with parameter
+
+The parameters are specified between the parenthesis, and inside the function body, \
+they act just like regular variables. `name` act as placeholder for a value.
+
+```
+let name = 'Gabriel A';
+
+writeMyName(name); //this is the call
+
+function writeMyName(name) {
+   console.log(name);
+}
+```
+
+Output:
+
+`Gabriel A`
+
+### Deafault Parameters
+
+- When the code calls greeting('Nick') the value of the argument is passed in and, 'Nick', will override the default parameter of 'stranger'.
+
+- When there isn’t an argument passed into greeting(), the default value of 'stranger' is used, and 'Hello, stranger!' is output.
+
+```
+function greeting (name = 'stranger') {
+  console.log(`Hello, ${name}!`)
+}
+
+greeting('Nick') // Output: Hello, Nick!
+greeting() // Output: Hello, stranger!
+```
+
+### Return
+
+To pass back information from the function call, we use a `return` statement.
+
+As example:
