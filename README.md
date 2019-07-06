@@ -1,19 +1,12 @@
 # `JavaScript Dokumentation by Gabriel Aigner`
 
-## Writing to the console
+## Index
 
-`console.log();`
+#### Data Types
 
-## Commenting
+#### [Variables](#variables)
 
-### Single line comment
-
-`// Print 5 to the console`
-
-### Multiple line comment
-
-`/* This is all commented console.log(10);` \
-`None of this is going to run! console.log(99); */`
+#### Commenting
 
 ## Data Types
 
@@ -65,6 +58,21 @@ Learn more about `let` [click here (JavaScript Dokumentation)](https://developer
 ### `const`
 
 A `const` variable cannot be reassigned because it is _constant_.
+
+## Commenting
+
+### Single line comment
+
+`// Print 5 to the console`
+
+### Multiple line comment
+
+`/* This is all commented console.log(10);` \
+`None of this is going to run! console.log(99); */`
+
+## Writing to the console
+
+`console.log();`
 
 ## Arithmetic Operators
 
