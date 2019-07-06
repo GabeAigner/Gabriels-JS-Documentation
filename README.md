@@ -193,9 +193,11 @@ Output:
 
 ### Deafault Parameters
 
-- When the code calls greeting('Nick') the value of the argument is passed in and, 'Nick', will override the default parameter of 'stranger'.
+- When the code calls greeting('Nick') the value of the argument is passed in and, \
+  'Nick', will override the default parameter of 'stranger'.
 
-- When there isn’t an argument passed into greeting(), the default value of 'stranger' is used, and 'Hello, stranger!' is output.
+- When there isn’t an argument passed into greeting(), \
+  the default value of 'stranger' is used, and 'Hello, stranger!' is output.
 
 ```
 function greeting (name = 'stranger') {
@@ -223,3 +225,28 @@ console.log(numOfMonitors);
 ```
 
 Output: `20`
+
+### Anonymous function
+
+A function with no name is `anonymous` \
+
+As Example:
+
+```
+let result = function(numberOne, numberTwo){
+   ...
+};
+```
+
+### Arrow functions
+
+Arrow functions remove the need to type out the keyword function every time you need to create a function. \
+Instead, you first include the parameters inside the `( )` and then add an arrow `=>` that points to the function body.
+
+```
+const plantNeedsWater = (day) => {
+  if (day === 'Wednesday') {
+    return true;
+  }
+};
+```
