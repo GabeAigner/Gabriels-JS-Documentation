@@ -396,3 +396,40 @@ Instead of Earth, it shall be called New Xaculon.'
 ```
 
 ### Nested Objects
+
+As example:
+
+```
+let spaceship = {
+  passengers: null,
+  telescope: {
+    yearBuilt: 2018,
+    model: "91031-XLT",
+    focalLength: 2032
+  },
+  crew: {
+    captain: {
+      name: 'Sandra',
+      degree: 'Computer Engineering',
+      encourageTeam() { console.log('We got this!') },
+     'favorite foods': ['cookies', 'cakes', 'candy', 'spinach'] }
+  }
+};
+```
+
+The exercise is to assign the captain‘s favorite food (the element in the 0th index of her 'favorite foods' array) to it to the variable `capFave`.
+
+```
+let capFave = spaceship.crew.captain['favorite foods'][0];
+```
+
+Next example exercise is to put an array of individual objects into passengers.
+
+```
+let spaceship = {
+  passengers: [{name: 'Peter'}],
+  telescope: {
+    ....
+```
+
+### Pass By Reference
