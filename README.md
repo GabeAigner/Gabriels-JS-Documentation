@@ -465,3 +465,11 @@ Output:
   homePlanet: 'Earth',
   disabled: true }
 ```
+
+### Looping Through Objects
+
+Loops are programming tools that repeat a block of code until a condition is met. \
+We learned how to iterate through arrays using their numerical indexing, but the key-value pairs in objects aren’t ordered! \
+\
+[JavaScript has given us alternative solution for iterating through objects with the `for...in` syntax .](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) \
+`for...in` will execute a given block of code for each property in an object.
