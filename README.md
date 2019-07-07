@@ -18,8 +18,6 @@
 
 [Properties](#properties)
 
-[Methods](#methods)
-
 [Built-in Objects](#built-in-objects)
 
 [Mathematical Assignment Operators](#mathematical-assignment-operators)
@@ -135,11 +133,11 @@ This is my Dog
 
 ```
 
-## Properties
+## String Properties
 
 `console.log('Hello'.length); // Prints 5`
 
-## Methods
+### String Methods
 
 Some string Methods [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype).
 
@@ -333,3 +331,68 @@ spaceship.color; // Returns 'silver',
 spaceship.flightPath; // Returns ['Venus', 'Mars', 'Saturn']
 spaceship.flightPath.length; // Returns 3
 ```
+
+#### Bracket Notation
+
+We _must_ use bracket notation when accessing keys that have `numbers`, `spaces`, or `special characters` in them. \
+Without bracket notation in these situations, our code would throw an error.
+\
+\
+With bracket notation you can also use a `variable` inside the brackets to select the keys of an object \
+This can be especially helpful when working with functions:
+
+```
+let returnAnyProp = (objectName, propName) => objectName[propName];
+
+returnAnyProp(spaceship, 'homePlanet'); // Returns 'Earth'
+```
+
+If we tried to write our `returnAnyProp()` function with dot notation `(objectName.propName)` \
+the computer would look for a `key` of `'propName'` on our object and `not the value` of the `propName` parameter.
+
+### Assign Properties
+
+One of two things can happen with property assignment:
+
+- If the property already exists on the object, whatever value it held before will be replaced with the newly assigned value.
+- If there was no property with that name, a new property will be added to the object.
+
+You can delete a property from an object with the `delete` operator.
+
+### Methods
+
+When the data stored on an object is a function we call that a _method_. \
+\
+For example `console` is a global javascript object and `.log()` is a method on that object. \
+`Math` is also a global javascript object and `.floor()` is a method on it. \
+\
+We can include `methods` in our`object literals` by creating ordinary, comma-separated key-value pairs. \
+The key serves as our method’s name, while the value is an `anonymous function` expression. \
+
+```
+const alienShip = {
+  invade: function () {
+    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+  }
+};
+```
+
+With the new method syntax introduced in ES6 we can omit the colon and the `function` keyword.
+
+```
+const alienShip = {
+  invade () {
+    console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
+  }
+};
+
+```
+
+Object methods are invoked by appending the object’s name with the dot operator followed by the method name and parentheses:
+
+```
+alienShip.invade(); // Prints 'Hello! We have come to dominate your planet.
+Instead of Earth, it shall be called New Xaculon.'
+```
+
+### Nested Objects
