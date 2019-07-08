@@ -16,7 +16,7 @@
 
 [String Templates](#string-templates)
 
-[Properties](#properties)
+[String Properties](#string-properties)
 
 [Built-in Objects](#built-in-objects)
 
