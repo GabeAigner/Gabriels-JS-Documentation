@@ -559,4 +559,51 @@ dogBello.incrementBehavior(5);      // entering the method of dogBello Instance
 ````
 After the call it's behaviour would be 5.
 
-###
+### Inheritance
+
+Inheritance means that a parent class like `Animal` can have children like `Cat` and you \
+dont need to implement the code which is in the parent class already. \
+
+In the next example, you will see two subclasses ``(Doctor and Nurse)`` from a parent class named ``HospitalEmployee``.
+
+Parent Class: ``HospitalEmployee``
+
+````
+class HospitalEmployee {
+  constructor (name){
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+  
+  get name(){
+    return this._name;
+  }
+  
+  get remainingVacationDays(){
+    return this._remainingVacationDays;
+  } 
+  
+  takeVacationDays(daysOff){
+    this._remainingVacationDays -= daysOff;
+  }
+}
+````
+``HospitalEmployee``
+child class: `Doctor`
+````
+
+````
+``HospitalEmployee``
+child class: `Nurse`
+````
+class Nurse extends HospitalEmployee {
+ constructor(name, certifications) {
+   super(name);
+   this._certifications = certifications;
+ } 
+}
+````
+Now you know:
+* The ``extends`` keyword makes the methods of the ``HospitalEmployee`` class available inside the ``Doctor`` class.
+
+* The ``super`` keyword calls the constructor of the parent class. In this case, ``super(name)`` passes the name argument of the ``Doctor`` class to the constructor of the ``HospitalEmployee`` class. When the ``HospitalEmployee`` constructor runs, it sets ``this._name = name;`` for new ``Doctor`` instances.
