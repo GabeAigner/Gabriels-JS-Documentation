@@ -556,5 +556,7 @@ We can call ``methods`` too, like in the example at the ``beginning`` of the ``c
 const dogBello = new Dog('Bello');  // we crate an instance
 
 dogBello.incrementBehavior(5);      // entering the method of dogBello Instance
-                                    // now it's behaviour would be 5 
 ````
+After the call it's behaviour would be 5.
+
+###
