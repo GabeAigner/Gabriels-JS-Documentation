@@ -83,8 +83,10 @@ A `const` variable cannot be reassigned because it is _constant_.
 `None of this is going to run! console.log(99); */`
 
 ## ``Writing to the console``
+`console.log();` \
 
-`console.log();`
+You can put variables or simple text in the  ``()``.
+
 
 ## ``How to work with Strings``
 ### String Concatenation
@@ -470,6 +472,11 @@ We learned how to iterate through arrays using their numerical indexing, but the
 `for...in` will execute a given block of code for each property in an object.
 
 ## ``Classes``
+
+### Styling
+It is very important for programmer that the variables in the classes have an ``_`` before the name.
+
+### A class
 Classes look like this in JavaScript:
 ````
 class Dog {
@@ -490,3 +497,49 @@ class Dog {
   }
 }
 ````
+
+### The constructor
+The one important method is the the _constructor_ method. JavaScript calls the ``constructor()`` method every time it creates a new instance of a class. \
+_Tipp: Surgeon means `Chirurg` in German._ 
+
+````
+class Surgeon {
+  constructor(name, department){
+    this._name = name;
+    this._department = department;
+  }
+    ....
+}
+````
+
+* This constructor() method accepts two arguments, ``name`` and ``department``.
+
+* Inside of the ``constructor()`` method, we use the this keywords. In the context of a class, this refers to an instance of that class. \
+In the surgeon class, we use this to set the value of the surgeon instance’s name property to the name argument and the department to the department.
+
+### An instance
+An ``instance`` is an object that contains the property names and methods of a class, but with ``unique property values``. \
+
+We create a new variable named ``surgeonPeter`` that will store an instance of our ``Surgeon`` class.
+
+````
+let surgeonCurry = new Surgeon('Peter', 'Orthopedics');
+````
+
+### Getter
+Class method and getter syntax is the same as it is for objects **except you can not include commas between methods.**
+
+This are the ``getter`` for our example.
+````
+...
+
+get name(){
+  return this._name;
+}
+
+get department (){
+  return this._department;
+}
+...
+````
+
