@@ -10,25 +10,17 @@
 
 [Writing to the console](#writing-to-the-console)
 
-[Arithmetic Operators](#arithmetic-operators)
+[How to work with Strings](#how-to-work-with-strings)
 
-[String Concatenation](#string-oncatenation)
-
-[String Templates](#string-templates)
-
-[Properties](#properties)
-
-[Built-in Objects](#built-in-objects)
-
-[Mathematical Assignment Operators](#mathematical-assignment-operators)
-
-[The Increment and Decrement Operator](#the-increment-and-decrement-operator)
+[Mathematic for coding](#mathematic-for-coding)
 
 [Functions](#functions)
 
 [Objects](#objects)
 
-## Data Types
+[Classes](#classes)
+
+## `Data Types`
 
 ### Number
 
@@ -59,7 +51,7 @@ A newer feature to the language, symbols are unique identifiers, useful in more 
 
 Collections of related data.
 
-## Variables
+## `Variables`
 
 The standard convention in JavaScript is `camel casing`.
 
@@ -79,7 +71,7 @@ Learn more about `let` [click here (JavaScript Dokumentation)](https://developer
 
 A `const` variable cannot be reassigned because it is _constant_.
 
-## Commenting
+## `Commenting`
 
 ### Single line comment
 
@@ -90,19 +82,15 @@ A `const` variable cannot be reassigned because it is _constant_.
 `/* This is all commented console.log(10);` \
 `None of this is going to run! console.log(99); */`
 
-## Writing to the console
+## `Writing to the console`
 
-`console.log();`
+`console.log();` \
 
-## Arithmetic Operators
+You can put variables or simple text in the `()`.
 
-1. Add: `+`
-2. Subtract: `-`
-3. Multiply: `*`
-4. Divide: `/`
-5. Remainder: `%`
+## `How to work with Strings`
 
-## String Concatenation
+### String Concatenation
 
 Use `+` to concatenate strings.
 
@@ -111,7 +99,7 @@ Use `+` to concatenate strings.
 `console.log('no' + 'space'); // Prints 'nospace'` \
 `console.log('middle' + ' ' + 'space'); // Prints 'middle space'`
 
-## String Templates
+### String Templates
 
 String templates are better in my opinion, because you cant fortget the \' \' you need for concatenation.
 
@@ -133,7 +121,7 @@ This is my Dog
 
 ```
 
-## String Properties
+### String Properties
 
 `console.log('Hello'.length); // Prints 5`
 
@@ -141,15 +129,17 @@ This is my Dog
 
 Some string Methods [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype).
 
-## Built-in Objects
+## `Mathematic for coding`
 
-- Round: Math.floor()
-- Random: Math.random()
-  \
-  \
-   For more `Math` objects [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
+### Arithmetic Operators
 
-## Mathematical Assignment Operators
+1. Add: `+`
+2. Subtract: `-`
+3. Multiply: `*`
+4. Divide: `/`
+5. Remainder: `%`
+
+### Mathematical Assignment Operators
 
 As example `x` is a `let` with the value `100`.
 
@@ -158,21 +148,29 @@ As example `x` is a `let` with the value `100`.
 - `*=` : x \*= 2 = 200 === x = x \* 2 => x = 200;
 - `/=` : x /= 5 = 20 === x = x / 5 => x = 20;
 
-## The Increment and Decrement Operator
+### The Increment and Decrement Operator
 
 As example `x` is a `let` with the value `2`.
 
-### Increment Operator
+#### Increment Operator
 
 `x++;` is like `x = x + 1` \
 for our example it's `3`;
 
-### Decrement Operator
+#### Decrement Operator
 
 `x--;` is like `x = x - 1` \
 for our example it's `1`;
 
-## Functions
+### Built-in Objects
+
+- Round: Math.floor()
+- Random: Math.random()
+  \
+  \
+   For more `Math` objects [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
+
+## `Functions`
 
 ### Declare a funkction
 
@@ -301,7 +299,7 @@ Code: `(after)`
 const squareNum = num => num * num;
 ```
 
-## Objects
+## `Objects`
 
 ### Creating Object Literals
 
@@ -505,3 +503,163 @@ for (let crewMember in spaceship.crew) {
   console.log(`${crewMember}: ${spaceship.crew[crewMember].name}`)
 };
 ```
+
+## `Classes`
+
+### Styling
+
+It is very important for programmer that the variables in the classes have an `_` before the name.
+
+### A class
+
+Classes look like this in JavaScript:
+
+```
+class Dog {
+  constructor(name) {           //this is the constructor
+    this._name = name;
+    this._behavior = 0;
+  }
+
+  get name() {                  //This is a getter method
+    return this._name;
+  }
+  get behavior() {
+    return this._behavior;
+  }
+
+  incrementBehavior(number) {   // this increments the _behavior variable
+    this._behavior += number;   // with the amount of number
+  }
+}
+```
+
+### The constructor
+
+The one important method is the the _constructor_ method. JavaScript calls the `constructor()` method every time it creates a new instance of a class. \
+_Tipp: Surgeon means `Chirurg` in German._
+
+```
+class Surgeon {
+  constructor(name, department){
+    this._name = name;
+    this._department = department;
+  }
+    ....
+}
+```
+
+- This constructor() method accepts two arguments, `name` and `department`.
+
+- Inside of the `constructor()` method, we use the this keywords. In the context of a class, this refers to an instance of that class. \
+  In the surgeon class, we use this to set the value of the surgeon instance’s name property to the name argument and the department to the department.
+
+### An instance
+
+An `instance` is an object that contains the property names and methods of a class, but with `unique property values`. \
+
+We create a new variable named `surgeonPeter` that will store an instance of our `Surgeon` class.
+
+```
+let surgeonPeter = new Surgeon('Peter', 'Orthopedics');
+```
+
+### Getter
+
+Class method and getter syntax is the same as it is for objects **except you can not include commas between methods.**
+
+This are the `getter` for our example.
+
+```
+...
+
+get name(){
+  return this._name;
+}
+
+get department (){
+  return this._department;
+}
+...
+```
+
+### Method Calls
+
+The syntax for calling methods and getters on an instance is the same as calling \
+them on an object — append the instance with a period, then the property or method name. \
+For methods, you must also include opening and closing parentheses.
+\
+To call the getter for `name` in from our old example we use:
+
+```
+console.log(surgeonPeter.name);
+```
+
+We can call `methods` too, like in the example at the `beginning` of the `classes cection`.
+
+```
+const dogBello = new Dog('Bello');  // we crate an instance
+
+dogBello.incrementBehavior(5);      // entering the method of dogBello Instance
+```
+
+After the call it's behaviour would be 5.
+
+### Inheritance
+
+Inheritance means that a parent class like `Animal` can have children like `Cat` and you \
+dont need to implement the code which is in the parent class already. \
+
+In the next example, you will see two subclasses `(Doctor and Nurse)` from a parent class named `HospitalEmployee`.
+
+Parent Class: `HospitalEmployee`
+
+```
+class HospitalEmployee {
+  constructor (name){
+    this._name = name;
+    this._remainingVacationDays = 20;
+  }
+
+  get name(){
+    return this._name;
+  }
+
+  get remainingVacationDays(){
+    return this._remainingVacationDays;
+  }
+
+  takeVacationDays(daysOff){
+    this._remainingVacationDays -= daysOff;
+  }
+}
+```
+
+`HospitalEmployee`
+child class: `Doctor`
+
+```
+
+```
+
+`HospitalEmployee`
+child class: `Nurse`
+
+```
+class Nurse extends HospitalEmployee {
+ constructor(name, certifications) {
+   super(name);
+   this._certifications = certifications;
+ }
+}
+```
+
+Now you know:
+
+- The `extends` keyword makes the methods of the `HospitalEmployee` class available inside the `Doctor` class.
+
+- The `super` keyword calls the constructor of the parent class. In this case, `super(name)` passes the name argument of the `Doctor` class to the constructor of the `HospitalEmployee` class. When the `HospitalEmployee` constructor runs, it sets `this._name = name;` for new `Doctor` instances.
+
+### Static Methods
+
+A `static` class like `Date.now()`, you can call it `directly` from the class, but not from an `instance` of the class.
