@@ -480,20 +480,20 @@ It is very important for programmer that the variables in the classes have an ``
 Classes look like this in JavaScript:
 ````
 class Dog {
-  constructor(name) {
+  constructor(name) {           //this is the constructor
     this._name = name;
     this._behavior = 0;
   }
 
-  get name() {
+  get name() {                  //This is a getter method
     return this._name;
   }
   get behavior() {
     return this._behavior;
   }   
 
-  incrementBehavior() {
-    this._behavior ++;
+  incrementBehavior(number) {   // this increments the _behavior variable
+    this._behavior += number;   // with the amount of number
   }
 }
 ````
@@ -523,7 +523,7 @@ An ``instance`` is an object that contains the property names and methods of a c
 We create a new variable named ``surgeonPeter`` that will store an instance of our ``Surgeon`` class.
 
 ````
-let surgeonCurry = new Surgeon('Peter', 'Orthopedics');
+let surgeonPeter = new Surgeon('Peter', 'Orthopedics');
 ````
 
 ### Getter
@@ -546,3 +546,15 @@ get department (){
 The syntax for calling methods and getters on an instance is the same as calling \
 them on an object — append the instance with a period, then the property or method name. \
 For methods, you must also include opening and closing parentheses.
+\
+To call the getter for `name` in from our old example we use:
+````
+console.log(surgeonPeter.name);
+````
+We can call ``methods`` too, like in the example at the ``beginning`` of the ``classes cection``.
+````
+const dogBello = new Dog('Bello');  // we crate an instance
+
+dogBello.incrementBehavior(5);      // entering the method of dogBello Instance
+                                    // now it's behaviour would be 5 
+````
