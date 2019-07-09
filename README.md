@@ -10,25 +10,17 @@
 
 [Writing to the console](#writing-to-the-console)
 
-[Arithmetic Operators](#arithmetic-operators)
+[How to work with Strings](#how-to-work-with-strings)
 
-[String Concatenation](#string-oncatenation)
-
-[String Templates](#string-templates)
-
-[String Properties](#string-properties)
-
-[Built-in Objects](#built-in-objects)
-
-[Mathematical Assignment Operators](#mathematical-assignment-operators)
-
-[The Increment and Decrement Operator](#the-increment-and-decrement-operator)
+[Mathematic for coding](#mathematic-for-coding)
 
 [Functions](#functions)
 
-[Objects](#objects)
+[Objects](#objects) 
 
-## Data Types
+[Classes](#classes)
+
+## ``Data Types``
 
 ### Number
 
@@ -59,7 +51,7 @@ A newer feature to the language, symbols are unique identifiers, useful in more 
 
 Collections of related data.
 
-## Variables
+## ``Variables``
 
 The standard convention in JavaScript is `camel casing`.
 
@@ -79,7 +71,7 @@ Learn more about `let` [click here (JavaScript Dokumentation)](https://developer
 
 A `const` variable cannot be reassigned because it is _constant_.
 
-## Commenting
+## ``Commenting``
 
 ### Single line comment
 
@@ -90,19 +82,12 @@ A `const` variable cannot be reassigned because it is _constant_.
 `/* This is all commented console.log(10);` \
 `None of this is going to run! console.log(99); */`
 
-## Writing to the console
+## ``Writing to the console``
 
 `console.log();`
 
-## Arithmetic Operators
-
-1. Add: `+`
-2. Subtract: `-`
-3. Multiply: `*`
-4. Divide: `/`
-5. Remainder: `%`
-
-## String Concatenation
+## ``How to work with Strings``
+### String Concatenation
 
 Use `+` to concatenate strings.
 
@@ -111,7 +96,7 @@ Use `+` to concatenate strings.
 `console.log('no' + 'space'); // Prints 'nospace'` \
 `console.log('middle' + ' ' + 'space'); // Prints 'middle space'`
 
-## String Templates
+### String Templates
 
 String templates are better in my opinion, because you cant fortget the \' \' you need for concatenation.
 
@@ -133,7 +118,7 @@ This is my Dog
 
 ```
 
-## String Properties
+### String Properties
 
 `console.log('Hello'.length); // Prints 5`
 
@@ -141,15 +126,17 @@ This is my Dog
 
 Some string Methods [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/prototype).
 
-## Built-in Objects
+## ``Mathematic for coding``
 
-- Round: Math.floor()
-- Random: Math.random()
-  \
-  \
-   For more `Math` objects [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
+### Arithmetic Operators
 
-## Mathematical Assignment Operators
+1. Add: `+`
+2. Subtract: `-`
+3. Multiply: `*`
+4. Divide: `/`
+5. Remainder: `%`
+
+### Mathematical Assignment Operators
 
 As example `x` is a `let` with the value `100`.
 
@@ -158,21 +145,29 @@ As example `x` is a `let` with the value `100`.
 - `*=` : x \*= 2 = 200 === x = x \* 2 => x = 200;
 - `/=` : x /= 5 = 20 === x = x / 5 => x = 20;
 
-## The Increment and Decrement Operator
+### The Increment and Decrement Operator
 
 As example `x` is a `let` with the value `2`.
 
-### Increment Operator
+#### Increment Operator
 
 `x++;` is like `x = x + 1` \
 for our example it's `3`;
 
-### Decrement Operator
+#### Decrement Operator
 
 `x--;` is like `x = x - 1` \
 for our example it's `1`;
 
-## Functions
+### Built-in Objects
+
+- Round: Math.floor()
+- Random: Math.random()
+  \
+  \
+   For more `Math` objects [click here (JavaScript Dokumentation)](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math).
+
+## ``Functions``
 
 ### Declare a funkction
 
@@ -301,7 +296,7 @@ Code: `(after)`
 const squareNum = num => num * num;
 ```
 
-## Objects
+## ``Objects``
 
 ### Creating Object Literals
 
@@ -473,3 +468,25 @@ We learned how to iterate through arrays using their numerical indexing, but the
 \
 [JavaScript has given us alternative solution for iterating through objects with the `for...in` syntax .](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/for...in) \
 `for...in` will execute a given block of code for each property in an object.
+
+## ``Classes``
+Classes look like this in JavaScript:
+````
+class Dog {
+  constructor(name) {
+    this._name = name;
+    this._behavior = 0;
+  }
+
+  get name() {
+    return this._name;
+  }
+  get behavior() {
+    return this._behavior;
+  }   
+
+  incrementBehavior() {
+    this._behavior ++;
+  }
+}
+````
