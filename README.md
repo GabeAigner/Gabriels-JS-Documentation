@@ -639,7 +639,12 @@ class HospitalEmployee {
 child class: `Doctor`
 
 ```
-
+class Doctor extends HospitalEmployee {
+  constructor(name, diploma) {
+    super(name);
+    this._diploma = diploma;
+  }
+}
 ```
 
 `HospitalEmployee`
