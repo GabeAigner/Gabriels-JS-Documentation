@@ -299,6 +299,10 @@ Code: `(after)`
 const squareNum = num => num * num;
 ```
 
+## ``TODO: LOOPS & ITERATIONS``
+This section is not finished. 
+
+
 ## `Objects`
 
 ### Creating Object Literals
