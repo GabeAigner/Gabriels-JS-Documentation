@@ -40,4 +40,53 @@ Make sure to turn on production mode when deploying for production.
 npm run build
 ```
 
-will create a distributable files (production ready) for you in folder dist (default) if you are using vue-cli
+will create a distributable files (production ready) for you in folder dist (default) if you are using `vue-cli`.
+
+## `Store all the Data of html in js`
+
+You can put all the data which would be in the html normally in the javascript.
+
+As example: (normal version)
+
+```
+<body>
+
+		<div id="app">
+			<p>Hello World!</p>
+		</div>
+
+		<script>
+        "use strict" // important
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "hello, world!"
+            }
+        })
+		</script>
+	</body>
+```
+
+```
+<body>
+
+		<div id="app">
+			<p>{{ message }}</p>
+		</div>
+
+		<script>
+        "use strict"
+
+        var app = new Vue({
+            el: "#app",
+            data: {
+                message: "hello, world!"
+            }
+        })
+
+		</script>
+```
+
+```
+
+```
