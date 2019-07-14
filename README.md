@@ -8,6 +8,8 @@
 
 [Commenting](#commenting)
 
+[What is "use strict"?](#what-is-""?)
+
 [Writing to the console](#writing-to-the-console)
 
 [How to work with Strings](#how-to-work-with-strings)
@@ -81,6 +83,67 @@ A `const` variable cannot be reassigned because it is _constant_.
 
 `/* This is all commented console.log(10);` \
 `None of this is going to run! console.log(99); */`
+
+## What is "use strict"?
+
+`"use strict";` Defines that JavaScript code should be executed in `"strict mode"`.
+
+- It is not a statement, but a literal expression, ignored by earlier versions of JavaScript.
+
+- The purpose of `"use strict"` is to indicate that the code should be executed in `"strict mode"`.
+
+- With strict mode, you can not, for example, use undeclared variables.
+
+### Declaring Strict Mode
+
+Strict mode is declared by adding `"use strict";` to the beginning of a script or a function. \
+\
+Declared at the `beginning of a script`, it has `global scope` (all code in the script will execute in strict mode):
+
+As Example:
+
+```
+"use strict";
+x = 3.14;       // This will cause an error because x is not declared
+```
+
+```
+"use strict";
+myFunction();
+
+function myFunction() {
+  y = 3.14;   // This will also cause an error because y is not declared
+}
+```
+
+Declared inside a function, it has local scope (only the code inside the function is in strict mode):
+
+```
+x = 3.14;       // This will not cause an error.
+myFunction();
+
+function myFunction() {
+  "use strict";
+  y = 3.14;   // This will cause an error
+}
+
+```
+
+### Why Strict Mode?
+
+- Strict mode makes it easier to write `"secure"` JavaScript.
+
+- Strict mode changes previously accepted `"bad syntax"` into real errors.
+
+- As an example, in normal JavaScript, mistyping a variable name creates a new global variable. In strict mode, this will throw an error, making it impossible to accidentally create a global variable.
+
+- In normal JavaScript, a developer will not receive any error feedback assigning values to non-writable properties.
+
+- In strict mode, any assignment to a non-writable property, a getter-only property, a non-existing property, a non-existing variable, or a non-existing object, will throw an error.
+
+### Not Allowed in Strict Mode
+
+If you want to know what is not allowed in `strict mode,` [click here](https://www.w3schools.com/js/js_strict.asp) and scroll down until you come to the section.
 
 ## `Writing to the console`
 
@@ -299,9 +362,9 @@ Code: `(after)`
 const squareNum = num => num * num;
 ```
 
-## ``TODO: LOOPS & ITERATIONS``
-This section is not finished. 
+## `TODO: LOOPS & ITERATIONS`
 
+This section is not finished.
 
 ## `Objects`
 
