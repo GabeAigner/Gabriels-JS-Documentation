@@ -8,7 +8,7 @@
 
 [Commenting](#commenting)
 
-[What is "use strict"?](#what-is-""?)
+[What is "use strict"?](#what-is-use-strict?)
 
 [Writing to the console](#writing-to-the-console)
 
@@ -84,7 +84,7 @@ A `const` variable cannot be reassigned because it is _constant_.
 `/* This is all commented console.log(10);` \
 `None of this is going to run! console.log(99); */`
 
-## `What is "use strict"?`
+## `What is use strict?`
 
 `"use strict";` Defines that JavaScript code should be executed in `"strict mode"`.
 
