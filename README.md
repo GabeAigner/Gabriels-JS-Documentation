@@ -176,13 +176,12 @@ var myAnimal = 'Dog';
 Code:
 
 `This is my ${myAnimal}`
+```
 
-
-Output:
-
+Output: \
+\
 This is my Dog
 
-```
 
 ### String Properties
 
