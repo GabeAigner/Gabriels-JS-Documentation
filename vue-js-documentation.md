@@ -7,9 +7,11 @@ You can import Vue by adding a ``<script>`` tag inside the ``<head>`` of your pr
 ```javascript
 <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
 ```
-We use the ``defer`` attribute on the ``<script>`` tag to make sure that the page is loaded and ready to hook up to Vue before we actually load Vue. \
+Use the ``defer`` attribute on the ``<script>`` tag to make sure that the page is loaded and ready to hook up to Vue before we actually load Vue. \
 \
-Even at this preliminary step, the Vue team has found ways to shorten your development time. Many front-end frameworks, like React and Angular, have difficult setup processes that can make starting a project a hassle. The Vue team recognized that many complex front-end features aren’t useful until late in the front-end learning journey (or sometimes at all). As a result, they offered this simple alternative that provides most of Vue’s features to developers quickly and easily. \
+Even at this preliminary step, the ``Vue team`` has found ways to shorten your development time. \
+Many front-end frameworks, like ``React`` and ``Angular``, have ``difficult setup processes`` that can make starting a project a hassle. \
+The Vue team recognized that many ``complex front-end features aren’t useful`` until ``late in the front-end learning journey`` (or sometimes at all). As a result, they ``offered`` this ``simple alternative`` that provides most of Vue’s features to developers ``quickly`` and ``easily``. \
 \
 Now you are ready to use `Vue.js`!
 
@@ -59,8 +61,6 @@ Each piece of information the Vue app needs to function is added to the options 
 This means that developers can easily update or add information in the Vue app by just looking for the correct key in the options object. \
 \
 ![Diagram Create a Vue App](img/diagramCreateVueApp.png)
-\
-
 
 ## `Store the Data of html in js`
 
