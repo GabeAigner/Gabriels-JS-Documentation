@@ -76,14 +76,14 @@ A `const` variable cannot be reassigned because it is _constant_.
 ## `Commenting`
 
 ### Single line comment
-
-`// Print 5 to the console`
-
+````javascript
+// Print 5 to the console
+````
 ### Multiple line comment
-
-`/* This is all commented console.log(10);` \
-`None of this is going to run! console.log(99); */`
-
+````javascript
+/* This is all commented console.log(10); \
+None of this is going to run! console.log(99); */
+````
 ## `What is use strict ?`
 
 `"use strict";` Defines that JavaScript code should be executed in `"strict mode"`.
@@ -102,12 +102,12 @@ Declared at the `beginning of a script`, it has `global scope` (all code in the 
 
 As Example:
 
-```
+```javascript
 "use strict";
 x = 3.14;       // This will cause an error because x is not declared
 ```
 
-```
+```javascript
 "use strict";
 myFunction();
 
@@ -118,7 +118,7 @@ function myFunction() {
 
 Declared inside a function, it has local scope (only the code inside the function is in strict mode):
 
-```
+```javascript
 x = 3.14;       // This will not cause an error.
 myFunction();
 
@@ -156,12 +156,12 @@ You can put variables or simple text in the `()`.
 ### String Concatenation
 
 Use `+` to concatenate strings.
-
-`console.log('front ' + 'space'); // Prints 'front space'` \
-`console.log('back' + ' space'); // Prints 'back space'` \
-`console.log('no' + 'space'); // Prints 'nospace'` \
-`console.log('middle' + ' ' + 'space'); // Prints 'middle space'`
-
+````javascript
+console.log('front ' + 'space');          // Prints 'front space'
+console.log('back' + ' space');           // Prints 'back space' 
+console.log('no' + 'space');              // Prints 'nospace'
+console.log('middle' + ' ' + 'space');    // Prints 'middle space'
+````
 ### String Templates
 
 String templates are better in my opinion, because you cant fortget the \' \' you need for concatenation.
@@ -170,7 +170,7 @@ Use `$` and `{}` to put variables in.
 
 As example:
 
-```
+```javascript
 var myAnimal = 'Dog';
 
 Code:
@@ -245,7 +245,7 @@ Write `{}` after your name and write code into it. Don't forget the closing Brac
 
 Example:
 
-```
+```javascript
 function writeMyName() {
    console.log('Gabriel');
 }
@@ -255,7 +255,7 @@ function writeMyName() {
 
 To call a function just write its name in the code.
 
-```
+```javascript
 writeMyName();
 ```
 
@@ -266,7 +266,7 @@ For this example it will output my name Gabriel.
 The parameters are specified between the parenthesis, and inside the function body, \
 they act just like regular variables. `name` act as placeholder for a value.
 
-```
+```javascript
 let name = 'Gabriel A';
 
 writeMyName(name); //this is the call
@@ -288,7 +288,7 @@ Output:
 - When there isn’t an argument passed into greeting(), \
   the default value of 'stranger' is used, and 'Hello, stranger!' is output.
 
-```
+```javascript
 function greeting (name = 'stranger') {
   console.log(`Hello, ${name}!`)
 }
@@ -303,7 +303,7 @@ To pass back information from the function call, we use a `return` statement.
 
 As example:
 
-```
+```javascript
 function monitorCount(rows, columns) {
   return rows * columns;
 }
@@ -321,7 +321,7 @@ A function with no name is `anonymous` \
 
 As example:
 
-```
+```javascript
 let result = function(numberOne, numberTwo){
    ...
 };
@@ -332,7 +332,7 @@ let result = function(numberOne, numberTwo){
 Arrow functions remove the need to type out the keyword function every time you need to create a function. \
 Instead, you first include the parameters inside the `( )` and then add an arrow `=>` that points to the function body.
 
-```
+```javascript
 const plantNeedsWater = (day) => {
   if (day === 'Wednesday') {
     return true;
@@ -350,7 +350,7 @@ The most condensed form of the function is known as concise body.
 
 Code: `(before)`
 
-```
+```javascript
 const squareNum = (num) => {
   return num * num;
 };
@@ -358,7 +358,7 @@ const squareNum = (num) => {
 
 Code: `(after)`
 
-```
+```javascript
 const squareNum = num => num * num;
 ```
 
@@ -372,7 +372,7 @@ This section is not finished.
 
 As example:
 
-```
+```javascript
 let spaceship = {
   'Fuel Type': 'gasoline',
   color: 'silver'
@@ -385,7 +385,7 @@ let spaceship = {
 
 As example:
 
-```
+```javascript
 let spaceship = {
   homePlanet: 'Earth',
   color: 'silver',
@@ -406,7 +406,7 @@ Without bracket notation in these situations, our code would throw an error.
 With bracket notation you can also use a `variable` inside the brackets to select the keys of an object \
 This can be especially helpful when working with functions:
 
-```
+```javascript
 let returnAnyProp = (objectName, propName) => objectName[propName];
 
 returnAnyProp(spaceship, 'homePlanet'); // Returns 'Earth'
@@ -434,7 +434,7 @@ For example `console` is a global javascript object and `.log()` is a method on 
 We can include `methods` in our`object literals` by creating ordinary, comma-separated key-value pairs. \
 The key serves as our method’s name, while the value is an `anonymous function` expression. \
 
-```
+```javascript
 const alienShip = {
   invade: function () {
     console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
@@ -444,7 +444,7 @@ const alienShip = {
 
 With the new method syntax introduced in ES6 we can omit the colon and the `function` keyword.
 
-```
+```javascript
 const alienShip = {
   invade () {
     console.log('Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.')
@@ -455,7 +455,7 @@ const alienShip = {
 
 Object methods are invoked by appending the object’s name with the dot operator followed by the method name and parentheses:
 
-```
+```javascript
 alienShip.invade(); // Prints 'Hello! We have come to dominate your planet.
 Instead of Earth, it shall be called New Xaculon.'
 ```
@@ -464,7 +464,7 @@ Instead of Earth, it shall be called New Xaculon.'
 
 As example:
 
-```
+```javascript
 let spaceship = {
   passengers: null,
   telescope: {
@@ -484,13 +484,13 @@ let spaceship = {
 
 The exercise is to assign the captain‘s favorite food (the element in the 0th index of her 'favorite foods' array) to it to the variable `capFave`.
 
-```
+```javascript
 let capFave = spaceship.crew.captain['favorite foods'][0];
 ```
 
 Next example exercise is to put an array of individual objects into passengers.
 
-```
+```javascript
 let spaceship = {
   passengers: [{name: 'Peter'}],
   telescope: {
@@ -504,7 +504,7 @@ the computer interprets the parameter name as pointing to the space in memory ho
 
 As example:
 
-```
+```javascript
 let spaceship = {
   'Fuel Type' : 'Turbo Fuel',
   homePlanet : 'Earth'
@@ -525,7 +525,7 @@ console.log(spaceship);
 
 Output:
 
-```
+```javascript
 { 'Fuel Type': 'avocado oil',
   homePlanet: 'Earth',
   disabled: true }
@@ -541,7 +541,7 @@ We learned how to iterate through arrays using their numerical indexing, but the
 
 As example:
 
-```
+```javascript
 let spaceship = {
     crew: {
     captain: {
@@ -581,7 +581,7 @@ It is very important for programmer that the variables in the classes have an `_
 
 Classes look like this in JavaScript:
 
-```
+```javascript
 class Dog {
   constructor(name) {           //this is the constructor
     this._name = name;
@@ -606,7 +606,7 @@ class Dog {
 The one important method is the the _constructor_ method. JavaScript calls the `constructor()` method every time it creates a new instance of a class. \
 _Tipp: Surgeon means `Chirurg` in German._
 
-```
+```javascript
 class Surgeon {
   constructor(name, department){
     this._name = name;
@@ -627,7 +627,7 @@ An `instance` is an object that contains the property names and methods of a cla
 
 We create a new variable named `surgeonPeter` that will store an instance of our `Surgeon` class.
 
-```
+```javascript
 let surgeonPeter = new Surgeon('Peter', 'Orthopedics');
 ```
 
@@ -637,7 +637,7 @@ Class method and getter syntax is the same as it is for objects **except you can
 
 This are the `getter` for our example.
 
-```
+```javascript
 ...
 
 get name(){
@@ -658,13 +658,13 @@ For methods, you must also include opening and closing parentheses.
 \
 To call the getter for `name` in from our old example we use:
 
-```
+```javascript
 console.log(surgeonPeter.name);
 ```
 
 We can call `methods` too, like in the example at the `beginning` of the `classes cection`.
 
-```
+```javascript
 const dogBello = new Dog('Bello');  // we crate an instance
 
 dogBello.incrementBehavior(5);      // entering the method of dogBello Instance
@@ -681,7 +681,7 @@ In the next example, you will see two subclasses `(Doctor and Nurse)` from a par
 
 Parent Class: `HospitalEmployee`
 
-```
+```javascript
 class HospitalEmployee {
   constructor (name){
     this._name = name;
@@ -705,7 +705,7 @@ class HospitalEmployee {
 `HospitalEmployee`
 child class: `Doctor`
 
-```
+```javascript
 class Doctor extends HospitalEmployee {
   constructor(name, diploma) {
     super(name);
@@ -717,7 +717,7 @@ class Doctor extends HospitalEmployee {
 `HospitalEmployee`
 child class: `Nurse`
 
-```
+```javascript
 class Nurse extends HospitalEmployee {
  constructor(name, certifications) {
    super(name);
