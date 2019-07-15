@@ -62,6 +62,37 @@ This means that developers can easily update or add information in the Vue app b
 \
 ![Diagram Create a Vue App](img/diagramCreateVueApp.png)
 
+## ``el``
+We need to specify to our Vue app which portion of our HTML we want to gain access to our Vue app’s logic. \
+We do this by adding a key-value pair to the Vue app’s options object. \
+We add a key called ``el``, standing for HTML ``el``ement, with a value of a CSS selector as a string that will target an element in our HTML and give it access to our Vue app’s functionality.
+````javascript
+// app.js
+const app = new Vue({
+  el: '#app'
+});
+````
+In the above example, we wanted an HTML element with an ID of ``app`` to gain access to our Vue app’s functionality. \
+We added an ``el key`` to the options object and made the value '``#app``', a CSS selector that will target an element with an ID,`` #``, of ``app``.
+````html
+<!-- index.html -->
+<head>
+  <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js" defer></script>
+  <script src="./js/app.js" defer></script>
+</head>
+<body>
+  <div id="app">
+    <!-- Vue App HTML Code -->
+  </div>
+</body>
+````
+**Note:** We must import our Vue app code after the ``<script>`` that loads ``Vue.js``. \
+Otherwise, we would ``not`` yet have access to the ``Vue library in app.js``, \
+making it ``impossible`` to ``create`` a Vue `app`. This is also why we add ``defer`` to both elements — to ensure Vue has ``fully loaded`` when we go to make our Vue app.
+
+## ``Data``
+
+
 ## `Store the Data of html in js`
 
 You can put all the data which would be in the html normally in the javascript.
