@@ -173,14 +173,12 @@ As example:
 ```javascript
 var myAnimal = 'Dog';
 
-Code:
-
-`This is my ${myAnimal}`
+This is my ${myAnimal}
 ```
 
 Output: \
 \
-This is my Dog
+`This is my Dog`
 
 
 ### String Properties
