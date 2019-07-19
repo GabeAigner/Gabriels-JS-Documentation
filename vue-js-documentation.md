@@ -221,5 +221,3 @@ necessarily improve page speed, an essential issue all front-end frameworks need
 Behind the scenes, Vue uses a really cool data structure called a **virtual DOM** to vastly improve speed and responsiveness of Vue apps. The best way to introduce this topic is to see it in action, so watch a short video to understand what a virtual DOM is and how it speeds up app performance. Check it out to learn how Vue apps render and respond to user actions so quickly. \
 \
 [Click here to watch the video](https://www.youtube.com/watch?v=jwRAdGLUarw)
-
-# `Getting Started with Vue`
