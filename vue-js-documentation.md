@@ -148,6 +148,22 @@ Using curly brackets for templating in HTML was popularized by a framework calle
 \
 This is far easier to read and write than trying to write vanilla JavaScript that selects specific HTML elements and updates their content dynamically. Using the `.data` attribute and mustache templates is yet another way Vue makes front-end web development faster to write, easier to read, and less error-prone.
 
+### Writing code into templates
+
+It is possible to write code into the templates like if we want to
+increment some counter by two instead of one
+
+```html
+<p>{{ counter * 2 }}</p>
+```
+
+Or like a `IF-Statement`, if the counter is greater than `ten` it will
+show `Greater than 10`, but if it is smaller `Smaller than 10`.
+
+```html
+<p>{{ counter * 2 > 10 ? 'Greater than 10' : 'Smaller than 10'}}</p>
+```
+
 ## `Directives`
 
 Directives are custom HTML attributes built into Vue that accomplish incredibly complex, common front-end operations using barely any code. \
@@ -172,19 +188,25 @@ Another complex, common front-end need is to render an array of items identicall
 
 Bam, just like that `v-for` will iterate through every item in our `.data‘s` todoList array, create a variable called `todo` containing each succesive array element, and create an `li` displaying each element in the list. `Even if a new item is added to the list, the list will be re-rendered instantly to display that new item.` \
 \
-One more super cool directive is `v-model`. v-model can be added to any form field and hooked up to our Vue app’s `data`. Modifying the form field will then automatically modify the specified Vue app data!
+One more super cool directive is `v-model`. v-model can be added to any input field and hooked up to our Vue app’s `data`. Modifying the input field will then automatically modify the specified Vue app data!
 
 ```html
 <input v-model="username" />
 ```
 
-The above `input` field will display the current value of `username` on the Vue app’s `data` object and will change the value of `username` if the user modifies the value in the field. That’s some complicated JavaScript implemented perfectly with very little code. \
+The above `input` field will display the current value of `username` on the Vue app’s `data` object and will change the value of `username` if the user modifies the value in the field. This is named `two way binding`. That’s some complicated JavaScript, implemented perfectly with very little code. \
 \
 As you may have noticed, every built-in Vue directive starts with **`v-`**. There are too many for me to cover, however you can view a list of them all [here](https://vuejs.org/v2/api/#Directives). \
 Just know that if there isn’t a directive that does what you need — you can even make your own! \
 [See all Java Directives here](https://vuejs.org/v2/api/#Directives) \
 \
 Directives make complex front-end code easy to write, easy to read, and optimized for great site performance.
+
+It is also `valid` to just `write code` in the `directive`, like this example shows:
+
+```javascript
+<button v-on:click="counter++">ClickMe</button>
+```
 
 ### Handling events
 
