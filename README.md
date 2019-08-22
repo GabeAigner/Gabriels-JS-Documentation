@@ -1,4 +1,4 @@
-# `JavaScript Dokumentation by Gabriel Aigner`
+# `JavaScript Documentation by Gabriel Aigner`
 
 ## Contents
 
