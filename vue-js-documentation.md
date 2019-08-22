@@ -123,6 +123,96 @@ const app = new Vue({
 
 In this example, we added the `data` property to our options object. Apps need to display many pieces of dynamic `data`. To accommodate this, the value of `.data` is an object as well. Every piece of data will be added to the .data object as a key-value pair. In this case, we only added one piece of data called `username` with a value of '`Michael`'.
 
+## `Methods`
+
+Methods are a `section` in the `Vue` object. In it are all the methods of the Vue instance. \
+It is possible to write all kind of function into it. \
+\
+To interact with the data of the Data object you have to write `this.` infront of it:
+
+```javascript
+new Vue({
+  el: "#app",
+  data: {
+    username: "Gabriel"
+  },
+  methods: {
+    writeUsername: function() {
+      return this.username;
+    }
+  }
+});
+```
+
+To call the methods we need to write them with round brackets.
+
+```html
+<p>{{ writeUsername() }}</p>
+
+// Output: Gabriel
+```
+
+## `Computed`
+
+Computed is also a Javascript object, just like `Data` and `Methods`, and also allows us to store properties, but it is not directly the data, instead it is also a function.
+The difference is that we don't need to write round brackets in the curved braces. And that is important to keep in mind:\
+\
+Everything stored in computed can be used just like you use a data in the Data object! \
+\
+The `diffence behind the scenes` is that for `computed properties` it `analizes` the code and is aware that something does not need to be re-runed.
+
+```javascript
+new Vue({
+  el: "#app",
+  data: {
+    username: "Gabriel"
+  },
+  computed: {
+    output: function() {
+      return this.username;
+    }
+  },
+  methods: {
+    writeUsername: function() {
+      return this.username;
+    }
+  }
+});
+```
+
+```html
+<p>{{ output }}</p>
+
+// Output: Gabriel
+```
+
+`PS: This is better explained in the Vue.js Course Lection 24.`
+
+## `Watch`
+
+The `watch` object, executes code upon data changes. \
+So if we have a `counter` and want to reset it after two seconds if it changes, we can do it like this:
+
+```javascript
+new Vue({
+  el: "#app",
+  data: {
+    name: "",
+    counter: 0
+  },
+  watch: {
+    counter: function(value) {
+      var vm = this;
+      setTimeout(function() {
+        vm.counter = 0;
+      }, 2000);
+    }
+  }
+});
+```
+
+`PS: This is better explained in the Vue.js Course Lection 25.`
+
 ## `Templates`
 
 As a reminder, we need the following tools to display dynamic information in our Vue app:
@@ -259,27 +349,36 @@ new Vue({
 Handling events isnot all, we can also `modify` them.
 As example we make a `input field`, and want to read the input data when someone is `pressing enter` and `pressing space`, because we can chain this modifiers.
 
-`````javascript
+```javascript
 <input type="text" v-on:keyup.enter.space="readInput" />
-````
+```
+
 and the Vue object
 
-````javascript
+```javascript
 new Vue({
-        el: "#app",
-        data: {
-          inputData: ""
-        },
-        methods: {
-          readInput: function(event) {
-            this.inputData = event.target.value;
-          }
-        }
-      });
-````
+  el: "#app",
+  data: {
+    inputData: ""
+  },
+  methods: {
+    readInput: function(event) {
+      this.inputData = event.target.value;
+    }
+  }
+});
+```
 
 We can also use .tab , .esc and some more.
 But that is only the top of the iceberg, because this are only the modifiers for keyup :D
+
+### Save time with Shorthands
+
+Instead of writing `v-on`, we can write `@`.
+As example: `v-on:click` can be written `@click` too. \
+\
+Instead of writing `v-bind`, we can write `:`.
+As example: `v-bind:href` can be written `:href` too.
 
 ## `Components`
 
@@ -340,4 +439,7 @@ necessarily improve page speed, an essential issue all front-end frameworks need
 Behind the scenes, Vue uses a really cool data structure called a **virtual DOM** to vastly improve speed and responsiveness of Vue apps. The best way to introduce this topic is to see it in action, so watch a short video to understand what a virtual DOM is and how it speeds up app performance. Check it out to learn how Vue apps render and respond to user actions so quickly. \
 \
 [Click here to watch the video](https://www.youtube.com/watch?v=jwRAdGLUarw)
-`````
+
+```
+
+```
